@@ -1,0 +1,24 @@
+{
+  "name": "yardstick-bot",
+  "version": "1.0.0",
+  "description": "Bot For GalacticPVP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TTV Moldy8709",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "common-tags": "^1.8.0",
+    "discord-giveaways": "^4.2.1",
+    "discord-player": "^2.3.1",
+    "discord.js": "^12.2.0",
+    "mongoose": "^5.10.6",
+    "ms": "^2.1.2",
+    "os": "^0.1.1",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.1.2",
+    "random-puppy": "^1.1.0"
+  }
+}
