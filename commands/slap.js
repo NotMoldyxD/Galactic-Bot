@@ -4,9 +4,10 @@ const client = new Discord.Client()
 module.exports = {
     name: "slap",
     description: "slaps a member",
-    category: "Actions",
+    category: "Action",
+    cooldown: 3,
     usage: "<@Name>",
-    run: (client, message, args) => {
+    execute(message) {
         const mentionedMember = message.mentions.members.first()
 
         const gifs = message.content.slice(prefix.length+6)
@@ -22,7 +23,7 @@ module.exports = {
                 `${message.author.username} just slapped ${mentionedMember.user.username}! `
             ]
 
-            let ClientMessgaes = [
+            let botMessgaes = [
                 `**${message.author.username} You cannot slap yourself!**`
             ]
 
@@ -32,10 +33,10 @@ module.exports = {
             const randomNumber2 = Math.floor(Math.random() * reponses.length)
             const randomResponse = reponses[randomNumber2]
 
-            const randomNumber3 = Math.floor(Math.random() * ClientMessgaes.length)
-            const randomClientMsg = ClientMessgaes[randomNumber3]
+            const randomNumber3 = Math.floor(Math.random() * botMessgaes.length)
+            const randomBotMsg = botMessgaes[randomNumber3]
 
-            if (mentionedMember.user.id === message.author.id) return message.channel.send(randomClientMsg)
+            if (mentionedMember.user.id === message.author.id) return message.channel.send(randomBotMsg)
 
             var embed = new Discord.MessageEmbed()
             .setAuthor(randomResponse, message.author.displayAvatarURL())
