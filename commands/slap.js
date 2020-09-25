@@ -22,7 +22,7 @@ module.exports = {
                 `${message.author.username} just slapped ${mentionedMember.user.username}! `
             ]
 
-            let botMessgaes = [
+            let ClientMessgaes = [
                 `**${message.author.username} You cannot slap yourself!**`
             ]
 
@@ -32,10 +32,10 @@ module.exports = {
             const randomNumber2 = Math.floor(Math.random() * reponses.length)
             const randomResponse = reponses[randomNumber2]
 
-            const randomNumber3 = Math.floor(Math.random() * botMessgaes.length)
-            const randomBotMsg = botMessgaes[randomNumber3]
+            const randomNumber3 = Math.floor(Math.random() * ClientMessgaes.length)
+            const randomClientMsg = ClientMessgaes[randomNumber3]
 
-            if (mentionedMember.user.id === message.author.id) return message.channel.send(randomBotMsg)
+            if (mentionedMember.user.id === message.author.id) return message.channel.send(randomClientMsg)
 
             var embed = new Discord.MessageEmbed()
             .setAuthor(randomResponse, message.author.displayAvatarURL())
