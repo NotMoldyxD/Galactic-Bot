@@ -6,7 +6,7 @@ module.exports = {
     description: "slaps a member",
     category: "Actions",
     usage: "<@Name>",
-    execute(message) {
+    run: (client, message, args) => {
         const mentionedMember = message.mentions.members.first()
 
         const gifs = message.content.slice(prefix.length+6)
