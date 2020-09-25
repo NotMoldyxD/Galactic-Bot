@@ -1,18 +1,14 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-
 const { token, prefix } = require('./config.json');
-
-
 const fs = require('fs');
 const mongo = require('./mongo')
-
 const resetWarns = require('./commands/rwarns');
 const { Player } = require("discord-player");
 const { Mongoose } = require('mongoose');
 const levels = require('./levels')
-
+const { badwords } = require("./data.json") 
 const player = new Player(client)
 client.player = player;
 
@@ -82,5 +78,35 @@ client.on("ready", () => {
 
     console.log(`Ready on ${client.guilds.cache.size} servers, for a total of ${client.users.cache.size} users`);
 })
+
+client.on("message", async message => {
+  if (message.author.bot) return;  
+  //START
+  if(!message.member.hasPermission("ADMINISTRATOR")) {
+    
+    if(is_url(message.content) === true) {
+      message.delete()
+      return message.channel.send("You can not send link here :/")
+    }
+}   
+    
+    
+    
+    
+    let confirm = false;
+    //NOW WE WILL USE FOR LOOP
+    var i;
+    for(i = 0;i < badwords.length; i++) {
+      
+      if(message.content.toLowerCase().includes(badwords[i].toLowerCase()))
+        confirm = true;
+      
+    }
+    
+    if(confirm) {
+      message.delete()
+      return message.channel.send("You are not allowed to send badwords here")
+    }    
+  })
 
 client.login(token);
