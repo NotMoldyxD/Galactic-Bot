@@ -8,7 +8,7 @@ module.exports = {
         const gifs = message.content.slice(config.prefix.length+6)
 
         if (!gifs) {
-            return message.channel.send("**You need to tell me who you would like to slaP!**")
+            return message.channel.send("**You need to tell me who you would like to slap!**")
         } else {
             let gifs = [
                 "https://media.giphy.com/media/vxvNnIYFcYqEE/source.gif"
