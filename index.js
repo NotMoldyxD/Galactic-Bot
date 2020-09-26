@@ -9,6 +9,7 @@ const { Player } = require("discord-player");
 const { Mongoose } = require('mongoose');
 const levels = require('./levels')
 const { badwords } = require("./data.json") 
+const antispam = require("better-discord-antispam");
 const player = new Player(client)
 client.player = player;
 
@@ -108,5 +109,24 @@ client.on("message", async message => {
       return message.channel.send("You are not allowed to send badwords here")
     }    
   })
+
+client.on("ready", () => {
+     antispam(client, {
+        limitUnitlWarns: 3,
+        limitUnitlMuted: 5,
+        interval: 3000,
+        warningsMessages: "Stop Now Or You Will Get Muted Kiddo!",
+        muteMessage: "The Spamming Kid Was Muted",
+        maxDuplicatesWarning: 5,
+        maxDuplicatesMute: 7,
+        ignoredRoles: ["Owner", "Realm Owner", "PVP God"],
+        mutedRole: "muted",
+        logChannel: "mod-logs"
+    });
+});
+
+client.on("message", msg => {
+    client.emit("checkMessage", msg);
+});
 
 client.login(token);
