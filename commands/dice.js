@@ -1,8 +1,18 @@
+const {MessageEmbed} = require('discord.js')
 module.exports = {
-    name: "dice",
-    description: "Rolls a dice",
-    category: "fun",
-    usage: "dice",
-    async run (client, message, args) {
-message.channel.send(new MessageEmbed().setTitle(`Dices Rolled!`).setDescription(`First Dice:\`${~~(Math.random() * 6)+1}\`\nSecond Dice: \`${~~(Math.random() * 6)+1}\``))
+name: 'snipe',
+description: 'get deleted messages',
+category: 'fun',
+
+ run: async(client, message, args)=>{
+ const msg = client.snipes.get(message.channel.id);
+ if(!msg) return message.channel.send("There isn't anything to snipe")
+   
+const embed = new MessageEmbed()
+.setAuthor(msg.author.tag, msg.author.displayAvatarURL())
+.setDescription(msg.content)
+.setColor('RED')
+.setImage(msg.image)
+message.channel.send(embed)
+  }
 }
