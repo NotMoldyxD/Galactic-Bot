@@ -9,7 +9,9 @@
   "author": "TTV Moldy8709",
   "license": "ISC",
   "dependencies": {
+    "antispam-guard": "^3.6.0",
     "axios": "^0.20.0",
+    "better-discord-antispam": "^2.0.0",
     "common-tags": "^1.8.0",
     "discord-giveaways": "^4.2.1",
     "discord-player": "^2.3.1",
