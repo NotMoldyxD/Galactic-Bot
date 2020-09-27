@@ -108,7 +108,7 @@ client.on("ready", () => {
         maxDuplicatesMute: 7,
         ignoredRoles: ["Owner", "Realm Owner", "PVP God"],
         mutedRole: "muted",
-        logChannel: "mod-logs"
+        logChannel: "antispam-logs"
     });
 });
 
