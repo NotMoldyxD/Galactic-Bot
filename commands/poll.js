@@ -9,7 +9,7 @@ module.exports = {
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('😲 New Poll! 😲')
-        .setDescription(pollDescription)
+        .setDescription(`Question:${pollDescription}`)
         .setColor('green')
         .setFooter("React With 👍 or 👎 to answer!")
         let msgEmbed = await pollChannel.send(embedPoll);
