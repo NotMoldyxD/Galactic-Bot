@@ -12,5 +12,5 @@ module.exports = {
       message.channel.send('Tails!');
     }
   }
-},
+}
 
