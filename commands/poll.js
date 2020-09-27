@@ -9,7 +9,7 @@ module.exports = {
     }
         let pollChannel = message.mentions.channels.first();
         let pollDescription = args.slice(1).join(' ');
-        message.channel.bulkDelete()
+        message.channel.bulkDelete(1)
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('😲 New Poll! 😲')
         .setDescription(`Question:${pollDescription}`)
