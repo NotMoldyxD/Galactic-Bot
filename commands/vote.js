@@ -33,7 +33,7 @@ run: async (bot, message, args) => {
 
               .addField("Voting Finished:", "----------------------------------------\n" +
                                             "Total votes (Yes): " + `${YES_Count-1}\n` +
-                                            "Total votes (NO): " + `${NO_Count-1}\n` +
+                                            "Total votes (No): " + `${NO_Count-1}\n` +
                                             "----------------------------------------", true)
 
               .setColor("0x#FF0000")
@@ -61,10 +61,10 @@ run: async (bot, message, args) => {
               .addField("Voting Finished:", "----------------------------------------\n" +
                                             "Question: " + question + "\n" +
                                             "Total votes (Yes): " + `${YES_Count-1}\n` +
-                                            "Total votes (NO): " + `${NO_Count-1}\n` +
+                                            "Total votes (No): " + `${NO_Count-1}\n` +
                                             "----------------------------------------", true)
   
-              .setColor("0x#FF0000")
+              .setColor("green")
               .setFooter(`© Galactic Bot by ${customisation.ownername}`);
     await message.channel.send({embed: sumsum});
   }
