@@ -7,24 +7,11 @@ const mongo = require('./mongo')
 const resetWarns = require('./commands/rwarns');
 const { Player } = require("discord-player");
 const { Mongoose } = require('mongoose');
-const levels = require('./levels')
 const { badwords } = require("./data.json") 
 const antispam = require("better-discord-antispam");
+const xpfile = require('./xp.json')
 const player = new Player(client)
 client.player = player;
-
-client.on('ready', async() => {
-console.log('on')
-
-levels(client)
-await mongo().then(mongoose => {
-    try {
-        console.log('Connected To Mongo')
-    } finally {
-        mongoose.connection.close()
-    }    
-  })
-})
 
 client.on('guildMemberAdd', member => {
     const channel = client.channels.cache.get('745723915308892160')
@@ -128,5 +115,41 @@ client.on("ready", () => {
 client.on("message", msg => {
     client.emit("checkMessage", msg);
 });
+
+client.on("message" ,function(message) {
+    if(message.author.Client) return;
+    var addXP = Math.floor(Math.random() * 10); //when i type addXP it will randomly choose a number between 1-10   [  Math.floor(Math.random() * 10)  ]
+// lvl 1 statics
+    if(!xpfile[message.author.id]) {
+        xpfile[message.author.id] = {
+           xp: 0,
+           level: 1,
+           reqxp: 100
+        }
+// catch errors
+       fs.writeFile("./xp.json",JSON.stringify(xpfile),function(err){ 
+        if(err) console.log(err)
+       })
+    }
+
+    xpfile[message.author.id].xp += addXP
+
+    if(xpfile[message.author.id].xp > xpfile[message.author.id].reqxp){
+        xpfile[message.author.id].xp -= xpfile[message.author.id].reqxp // it will subtrsct xp whenever u pass a lvl
+        xpfile[message.author.id].reqxp *= 2 // XP you need to increase if level 1 is 100 xp so lvl 2 will 200 xp (multiplied by 2 [   .reqxp *= 2  ])
+        xpfile[message.author.id].reqxp = Math.floor(xpfile[message.author.id].reqxp) // XP Round
+        xpfile[message.author.id].level += 1 // it add 1 level when u level up
+
+// this code will send (" you are now level [your lvl]!") then it will delete it after 10 seconds        
+        message.reply("You Are Now Level **"+xpfile[message.author.id].level+"**!").then( 
+            msg=>msg.delete({timeout: "10000"})
+        )
+
+    }
+// catch errors
+    fs.writeFile("./xp.json",JSON.stringify(xpfile),function(err){
+        if(err) console/log(err)
+    })
+})
 
 client.login(token);
