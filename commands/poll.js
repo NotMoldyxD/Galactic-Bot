@@ -12,7 +12,7 @@ module.exports = {
         message.channel.bulkDelete(1)
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('😲 New Poll! 😲')
-        .setDescription(`Question:${pollDescription}`)
+        .setDescription(`Question: ${pollDescription}`)
         .setColor('green')
         .setFooter("React With 👍 or 👎 to answer!")
         let msgEmbed = await pollChannel.send(embedPoll);
