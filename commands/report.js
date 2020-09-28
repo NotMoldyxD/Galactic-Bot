@@ -47,6 +47,7 @@ module.exports = {
           }
         );
       Channel.send(Embed);
+      message.channel.send(`You have reported ${User.tag}`)
     }
   },
 };
