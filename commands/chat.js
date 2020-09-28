@@ -15,7 +15,7 @@ module.exports = {
             response = await axios.get(url);
             data = response.data;
         } catch (e) {
-            return message.channel.send(`An error occured, please try again!`)
+            return message.channel.send("Fun")
         }
         await message.channel.send(data.response)
     }
