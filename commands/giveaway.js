@@ -32,6 +32,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) {
       .setTitle(`New giveaway!`)
       .setDescription(
         `The user ${message.author} is hosting a giveaway for the prize of **${prize}**`
+      .setDescription(`Time left: ${time}`)
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
