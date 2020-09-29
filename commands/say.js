@@ -4,7 +4,7 @@ module.exports = {
     name: "say",
     desciption: "say command",
     usage: "say <message>",
-    category: "fun",
+    category: "😆**fun**😆",
 
     async run (client, message, args) {
 if(!message.member.hasPermission("ADMINISTRATOR")) {
