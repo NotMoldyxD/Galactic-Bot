@@ -3,7 +3,7 @@ module.exports = {
     name: "slowmode",
     description: "Slowing down the channel.",
     usage: "slowmode [channel] <time>",
-    category: "moderation",
+    category: "utility",
 
 run: async (client, message, args) => {
   if (!message.member.permissions.any(["ADMINISTRATOR", "MANAGE_CHANNELS"])) {
