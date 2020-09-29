@@ -6,7 +6,7 @@ module.exports = {
     name: "balance",
     description: "Checking yours, or other members money.",
     usage: "balance [@user | user ID]",
-    category: "🎮game🎮",
+    category: "🎮**game**🎮",
 run: async (client, message, args) => {
     let user;
     if (message.mentions.users.first()) {
