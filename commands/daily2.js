@@ -4,9 +4,9 @@ let ms = require("parse-ms");
 
 
 module.exports = {
-    name: "daily2",
+    name: "FreeOwnerMoney",
     description: "Collect the daily credits for owners.",
-    category: "game",
+    category: "🎮**game**🎮",
 
 run: async (client, message, args) => {
     if (message.author.id !== '326604688373973003') {
