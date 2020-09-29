@@ -6,7 +6,7 @@ module.exports = {
     name: "gamble",
     description: "An efficient way to double your money.",
     usage: "gamble <bet/amount>",
-    category: "game",
+    category: "🎮**game**🎮",
 
 run: async (client, message, args) => {
     const amount = parseInt(args[0]);
