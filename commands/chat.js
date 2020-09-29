@@ -1,7 +1,7 @@
 const axios = require('axios');
 module.exports = {
     name: "chat",
-    category: "fun",
+    category: "😆**fun**😆",
     aliases: ["chat", "c"],
     description: "Chat With Bot",
     
