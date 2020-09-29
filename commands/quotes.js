@@ -4,7 +4,7 @@ module.exports = {
     name: "quotes",
     description: "gives a quote",
     usage: "quotes",
-    category: "fun",
+    category: "😆**fun**😆",
     run: (client, message, args) => {
 message.channel.send(
     new Discord.MessageEmbed()
