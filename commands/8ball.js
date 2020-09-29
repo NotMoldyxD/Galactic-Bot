@@ -3,7 +3,7 @@ const config = require('../config.json');
 module.exports = {
   name: "8ball",
   description: "There is a big chance I insult you!",
-  category: "fun",
+  category: "😆**fun**😆",
   run: async (client, message, args) => {
     let question = message.content.slice(config.prefix.length + 6);
     if (!question)
