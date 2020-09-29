@@ -1,4 +1,4 @@
-      const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const config = require('../config.json');
 module.exports = {
   name: "snipe",
@@ -45,4 +45,5 @@ module.exports = {
             message.channel.send(latestMessage[1].content)
         });
     }
-    
+    }
+}
