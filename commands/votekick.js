@@ -6,7 +6,7 @@ module.exports = {
     name: 'votekick',
     description: 'Vote to kick someone.',
     usage: 'votekick',
-    category: 'fun',
+    category: '😆**fun**😆',
 run: async (bot, message, args) => {
 
   if (message.mentions.users.size === 0){
