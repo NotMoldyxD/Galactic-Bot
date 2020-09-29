@@ -58,7 +58,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", () => {
     function randomStatus() {
-        let status = [`Prefix [${prefix}, ${MusicBotPrefix}]`, "Made by Moldey", `${prefix}help, ${MusicBotPrefix}`, "discord.gg/qPnkbf9"]
+        let status = [`Prefix [${prefix}, ${MusicBotPrefix}]`, "Made by Moldey", `${prefix}help, ${MusicBotPrefix}help`, "discord.gg/qPnkbf9"]
         let rstatus = Math.floor(Math.random() * status.length);
 
         client.user.setActivity(status[rstatus], { type: "LISTENING" });
