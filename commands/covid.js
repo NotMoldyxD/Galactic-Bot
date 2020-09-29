@@ -6,7 +6,7 @@ module.exports = {
     name: "covid",
     description: "Track a country or worldwide COVID-19 cases",
     usage: "covid <country>",
-    category: "fun",
+    category: "😆**fun**😆",
 
     async run (client, message, args){
 
