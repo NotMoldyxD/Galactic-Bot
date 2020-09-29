@@ -45,4 +45,4 @@ module.exports = {
             message.channel.send(latestMessage[1].content)
         });
     }
-    }
+    
