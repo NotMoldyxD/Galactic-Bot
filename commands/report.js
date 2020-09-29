@@ -2,12 +2,10 @@ const { MessageEmbed } = require("discord.js");
 const config = require('../config.json');
 module.exports = {
   name: "report",
-  category: "moderation",
+  category: "utility",
   description: "Report a user of your choice!",
   usage: "<User mention>",
   run: async (bot, message, args) => {
-    if (!message.member.permissions.has("MANAGE_MESSAGES"))
-      return message.channel.send(`No.`);
     let User = message.mentions.users.first() || null;
 
     if (User == null) {
@@ -30,13 +28,13 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`New report!`)
         .setDescription(
-          `The moderator \`${message.author.tag}\` has reported the user \`${User.tag}\`! `
+          `\`${message.author.tag}\` has reported the user \`${User.tag}\`! `
         )
         .setColor(`GREEN`)
         .setThumbnail(Avatar)
         .addFields(
-          { name: "Mod ID", value: `${message.author.id}`, inline: true },
-          { name: "Mod Tag", value: `${message.author.tag}`, inline: true },
+          { name: "Person's ID", value: `${message.author.id}`, inline: true },
+          { name: "Person's Tag", value: `${message.author.tag}`, inline: true },
           { name: "Reported ID", value: `${User.id}`, inline: true },
           { name: "Reported Tag", value: `${User.tag}`, inline: true },
           { name: "Reason", value: `\`${Reason.slice(1)}\``, inline: true },
