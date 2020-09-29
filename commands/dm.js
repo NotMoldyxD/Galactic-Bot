@@ -2,7 +2,7 @@
 module.exports = {
   name: "dm",
   description: "DM a user in the guild",
-  category: "fun",
+  category: "😆**fun**😆",
   run: async (bot, message, args) => {
     if (!message.member.permissions.has("MANAGE_MESSAGES"))
       return message.channel.send("You do not have enough permissions!");
