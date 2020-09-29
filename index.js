@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const { token, prefix } = require('./config.json');
+const { token, prefix, MusicBotPrefix } = require('./config.json');
 const fs = require('fs');
 const mongo = require('./mongo')
 const resetWarns = require('./commands/rwarns');
@@ -58,7 +58,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", () => {
     function randomStatus() {
-        let status = [`Prefix [${prefix}]`, "Made by Moldey", `${prefix}help`, "discord.gg/qPnkbf9"]
+        let status = [`Prefix [${prefix}, ${MusicBotPrefix}]`, "Made by Moldey", `${prefix}help, ${MusicBotPrefix}`, "discord.gg/qPnkbf9"]
         let rstatus = Math.floor(Math.random() * status.length);
 
         client.user.setActivity(status[rstatus], { type: "LISTENING" });
