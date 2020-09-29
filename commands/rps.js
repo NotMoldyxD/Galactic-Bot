@@ -4,7 +4,7 @@ module.exports = {
     name: 'rps',
     description: 'Rock, Papper, Scissors.',
     usage: 'rps',
-    category: 'game',
+    category: '🎮**game**🎮',
 run: (client, msg, args) => {
     let choice = args.join(" ").toLowerCase();
     if (choice === '') return msg.reply("Please specify either rock, paper or scissors.");
