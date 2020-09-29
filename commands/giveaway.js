@@ -5,7 +5,7 @@ module.exports = {
 name: "giveaway",
   description: "Create a simple giveaway",
   usage: "<time> <channel> <prize>",
-  category: "fun",
+  category: "utility",
    run: async (client, message, args) => {
 if(!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(`**${message.author.username}**, You do not have perms to make a giveaway`)
