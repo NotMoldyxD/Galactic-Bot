@@ -6,7 +6,7 @@ let ms = require("parse-ms");
 module.exports = {
     name: "daily",
     description: "Collect the daily credits.",
-    category: "game",
+    category: "🎮game🎮",
 
 run: async (client, message, args) => {
     let pad_zero = num => (num < 10 ? '0' : '') + num;
