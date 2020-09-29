@@ -3,7 +3,7 @@ const ms = require("ms");
 module.exports = {
     name: "timer",
     description: "timer",
-    category: "fun",
+    category: "utility",
     aliases: ["alarm"],
     usage: "timer",
 
