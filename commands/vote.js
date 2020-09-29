@@ -6,7 +6,7 @@ module.exports = {
     name: 'vote',
     description: 'Vote for the message above.',
     usage: 'vote',
-    category: 'fun',
+    category: '😆**fun**😆',
 run: async (bot, message, args) => {
   if(!args || args[0] === 'help') return message.reply("Usage: vote <question>")
   // Number.isInteger(itime)
