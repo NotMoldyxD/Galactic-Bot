@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const { token, prefix, MusicBotPrefix } = require('./config.json');
+const { token, prefix } = require('./config.json');
 const fs = require('fs');
 const mongo = require('./mongo')
 const resetWarns = require('./commands/rwarns');
