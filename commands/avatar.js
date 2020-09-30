@@ -5,7 +5,7 @@ module.exports = {
     name: "avatar",
     description: "Display a user avatar",
     usage: "avatar [@user | user ID]",
-    category: "utility",
+    category: "🧹**utility**🧹",
 
 run: async (client, message, args) => {
   let user;
