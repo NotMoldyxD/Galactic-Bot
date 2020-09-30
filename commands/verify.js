@@ -2,7 +2,7 @@ const discord = require("discord.js")
 module.exports = {
     name: "verify",
     description: "Verify yourself to make sure you are not a robot.",
-    category: "utility",
+    category: "🧹**utility**🧹",
 run: async (client, message, args) => {
     message.member.roles.add("745723906970746880").then(
         embed = new discord.MessageEmbed()
