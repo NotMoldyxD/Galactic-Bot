@@ -4,7 +4,7 @@ const xpfile = require('../xp.json')
 module.exports = {
     name: "level",
     description: "Check what level you are in the server!",
-    category: "utility",
+    category: "🧹**utility**🧹",
     run: async (client, message, args) => {
         let user = message.mentions.users.first() || message.author
 
