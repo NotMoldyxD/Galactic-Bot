@@ -5,7 +5,7 @@ module.exports = {
     name: 'tickle',
     description: 'Tickles someone OwO',
     usage: 'tickle',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args, tools) => {
     if (!message.mentions.users.first()) return message.reply("You need to mention someone to tickle them");
     if(message.mentions.users.first().id === "242263403001937920") return message.reply('You can\'t tickle him. He will explode on impact!');
