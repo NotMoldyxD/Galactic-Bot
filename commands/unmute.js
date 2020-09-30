@@ -1,6 +1,6 @@
 module.exports = {
     name: "unmute",
-    category: "moderation",
+    category: "📝**moderation**📝",
     usage: "unmute <@user>",
     description: "You can unmute people that where previously muted",
     run: async (client, message, args) => {
