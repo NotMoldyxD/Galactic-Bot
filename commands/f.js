@@ -4,7 +4,7 @@ const customisation = require('../customisation.json');
     name: 'f',
     description: 'Press F to pay Respekt',
     usage: 'f',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args) => {
     if(args && args.length > 1){
         message.channel.send(`${message.author.username} has paid their respect for **${args.join(' ')}** :heart:`)
