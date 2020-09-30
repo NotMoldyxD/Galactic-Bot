@@ -5,7 +5,7 @@ module.exports = {
     name: 'poke',
     description: 'Pokes someone OwO',
     usage: 'poke',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args, tools) => {
     if (!message.mentions.users.first()) return message.reply("You need to mention someone to pat them");
     if (message.mentions.users.first().id === client.user.id) return message.channel.send('<a:yayyy:497742636439044096>');
