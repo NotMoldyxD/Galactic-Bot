@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "poll",
   description: "Create a simple yes or no poll",
-  category: "utility",
+  category: "🧹**utility**🧹",
   run: async (client, message, args) => {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(`**${message.author.username}**, You do not have perms to make a poll`)
