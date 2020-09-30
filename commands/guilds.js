@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "guilds",
   description: "View all guilds the bot is in",
-  category: "owner",
+  category: "👑**owner**👑",
   run: (client, message) => {
     if (message.author.id !== '326604688373973003') {
             return message.channel.send(`You cannot use this command!`)
