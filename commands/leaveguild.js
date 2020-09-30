@@ -1,7 +1,7 @@
 module.exports = {
   name: "leaveguild",
   description: "Leaves a guid by the provided Id",
-  category: "owner",
+  category: "👑**owner**👑",
   run: async (client, message, args) => {
     if (message.author.id !== '326604688373973003') {
             return message.channel.send(`You cannot use this command!`)
