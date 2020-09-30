@@ -1,6 +1,5 @@
 {
 "token": "NzM5OTU2MDA5OTk2Mzg2NDI1.Xyh_vA.ka5i7tfbrYMOGDey5xZaAzUGjyY",
 "prefix": ";",
-"mongoPath": "mongodb://localhost:27017",
-"MusicBotPrefix": "m;"
+"mongoPath": "mongodb://localhost:27017"
 }
