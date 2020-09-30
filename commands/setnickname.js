@@ -4,7 +4,7 @@ module.exports = {
   name: "setnickname",
   description: "Set a user nickname.",
   usage: "g/setnickname <@user> <nick>",
-  category: "moderation",
+  category: "📝**moderation**📝",
 run: async (client, message, args) => {
   
   // You can make a single array to detect the user permissions.
