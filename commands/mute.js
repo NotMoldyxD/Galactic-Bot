@@ -4,7 +4,7 @@ module.exports = {
     name: "mute",
     description: "You mute people xD",
     usage: "mute <@mention> <reason>",
-    category: "moderation",
+    category: "📝**moderation**📝",
     run: async (client, message, args) => {
 
         if (!message.member.hasPermission("ADMINISTRATOR")) {
