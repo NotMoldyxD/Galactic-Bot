@@ -5,7 +5,7 @@ const customisation = require('../customisation.json');
     name: 'spank',
     description: 'Spanks someone xD',
     usage: 'spank',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args, tools) => {
     if (!message.mentions.users.first()) return message.reply("You need to mention someone to spank them");
     if(!message.channel.nsfw) return message.reply("NSFW is not enabled in this channel");
