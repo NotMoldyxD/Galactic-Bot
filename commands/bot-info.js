@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const os = require('os')
 module.exports = {
     name: "bot-info",
-    category: "utility",
+    category: "🧹**utility**🧹",
     description: "Show info on galactic bot",
     usage: "bot-info",
     aliases: ['botinfo'],
