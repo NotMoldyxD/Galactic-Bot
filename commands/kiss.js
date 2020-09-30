@@ -5,7 +5,7 @@ module.exports = {
     name: 'kiss',
     description: 'Kisses someone OwO',
     usage: 'kiss',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args, tools) => {
     if (!message.mentions.users.first()) return message.reply("You need to mention someone to kiss them :3");
     if (message.mentions.users.first().id == client.user.id && message.author.id !== "242263403001937920") return message.reply("No kissing unless you're my Dev :<")
