@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const config = require('../config.json');
 module.exports = {
   name: "report",
-  category: "utility",
+  category: "🧹**utility**🧹",
   description: "Report a user of your choice!",
   usage: "<User mention>",
   run: async (bot, message, args) => {
