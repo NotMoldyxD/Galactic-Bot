@@ -5,7 +5,7 @@ const customisation = require('../customisation.json');
     name: 'feed',
     description: 'Feeds someone OwO',
     usage: 'feed',
-    category: 'actions',
+    category: '🎬**actions**🎬',
 run: async (client, message, args, tools) => {
     if (!message.mentions.users.first()) return message.reply("You need to mention someone to feed them!");
     if (message.mentions.users.first().id == client.user.id && message.author.id !== "242263403001937920") return message.channel.send("I don't eat tho")
