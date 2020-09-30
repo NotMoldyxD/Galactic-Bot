@@ -1,7 +1,7 @@
 module.exports = {
     name: "clear",
     description: "Clears messages",
-    category: "moderation",
+    category: "📝**moderation**📝",
     usage: "clear <ammount>",
 
     async run (client, message, args) {
