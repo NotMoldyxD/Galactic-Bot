@@ -5,7 +5,7 @@ module.exports = {
     name: "tempmute",
     description: "You mute people xD",
     usage: "tempmute <@mention> <reason> <time>",
-    category: "moderation",
+    category: "📝**moderation**📝",
     run: async (client, message, args) => {
 
 if(message.member.hasPermission('MANAGE_MESSAGES')) {
