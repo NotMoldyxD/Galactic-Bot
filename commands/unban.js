@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "unban",
-    category: "moderation",
+    category: "📝**moderation**📝",
     description: "You can unban players that where recently banned",
     usage: "unban <@user>",
     run: async (client, message, args) => {
