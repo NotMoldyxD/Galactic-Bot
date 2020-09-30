@@ -5,7 +5,7 @@ module.exports = {
   name: 'credits',
   description: 'Bot contributors!',
   usage: 'credits',
-  category: '	:broom:**utility**:broom',
+  category: '🧹**utility**🧹',
 run: (client, message) => {
   let info = JSON.parse(fs.readFileSync("./halloffame.json", "utf8"));
   let big = ''
