@@ -2,13 +2,13 @@ const discord = require('discord.js');
 //realm code: 94x17VMn4E0
 module.exports = {
     name: 'whosdaddy',
-    category: 'fun',
+    category: '😆**fun**😆',
     description: 'WHOOOOOOOOOOOOOOOS DADDDDDDDDDDDY',
-    usage: `g/whosdaddy`,
+    usage: `;whosdaddy`,
     run: async (client, message, args) => {
         embed = new discord.MessageEmbed()
         .setTitle("Whos Daddy!")
-        .setDescription(`Moldy#0394!`)
+        .setDescription(`Sexy Moldy#0394, and Sexy Warpq#3390!`)
         .setColor("GREEN")
         .setThumbnail(message.author.avatarURL)
         .setFooter(`I love my daddy!`);   
