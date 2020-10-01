@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const { token, prefix } = require('./config.json');
+const { token, default_prefix } = require('./config.json');
 const fs = require('fs');
 const mongo = require('./mongo')
 const resetWarns = require('./commands/rwarns');
@@ -12,6 +12,35 @@ const antispam = require("better-discord-antispam");
 const xpfile = require('./xp.json')
 const player = new Player(client)
 client.player = player;
+
+client.on("message", async message => {
+  
+    if(message.author.bot) return;
+      if(!message.guild) return;
+      let prefix = db.get(`prefix_${message.guild.id}`)
+      if(prefix === null) prefix = default_prefix;
+      
+      if(!message.content.startsWith(prefix)) return;
+      
+         if (!message.member) message.member = await message.guild.fetchMember(message);
+    
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const cmd = args.shift().toLowerCase();
+        
+        if (cmd.length === 0) return;
+        
+        // Get the command
+        let command = client.commands.get(cmd);
+        // If none is found, try to find it by alias
+        if (!command) command = client.commands.get(client.aliases.get(cmd));
+    
+        // If a command is finally found, run the command
+        if (command) 
+            command.run(client, message, args);
+      
+    return addexp(message)
+    
+     })
 
 client.on('guildMemberAdd', member => {
     const channel = client.channels.cache.get('745723915308892160')
