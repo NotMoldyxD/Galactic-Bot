@@ -27,7 +27,13 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription("Bot Made By: Moldey#0394")
+        .setDescription("
+╔═══╗────────────────╔╗
+║╔═╗║────────────────║║
+║║─╚╬══╦╗╔╦╗╔╦══╦═╗╔═╝╠══╗
+║║─╔╣╔╗║╚╝║╚╝║╔╗║╔╗╣╔╗║══╣
+║╚═╝║╚╝║║║║║║║╔╗║║║║╚╝╠══║
+╚═══╩══╩╩╩╩╩╩╩╝╚╩╝╚╩══╩══╝")
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL());
