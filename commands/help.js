@@ -27,12 +27,13 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription(`╔═══╗________________╔╗
-                         ║╔═╗║________________║║
-                         ║║─╚╬══╦╗╔╦╗╔╦══╦═╗╔═╝╠══╗
-                         ║║─╔╣╔╗║╚╝║╚╝║╔╗║╔╗╣╔╗║══╣
-                         ║╚═╝║╚╝║║║║║║║╔╗║║║║╚╝╠══║
-                         ╚═══╩══╩╩╩╩╩╩╩╝╚╩╝╚╩══╩══╝`)
+        .setDescription(`
+╔═══╗────────────────╔╗
+║╔═╗║────────────────║║
+║║─╚╬══╦╗╔╦╗╔╦══╦═╗╔═╝╠══╗
+║║─╔╣╔╗║╚╝║╚╝║╔╗║╔╗╣╔╗║══╣
+║╚═╝║╚╝║║║║║║║╔╗║║║║╚╝╠══║
+╚═══╩══╩╩╩╩╩╩╩╝╚╩╝╚╩══╩══╝`)
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL());
