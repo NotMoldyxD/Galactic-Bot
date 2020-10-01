@@ -27,8 +27,8 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription(`╔═══╗                ╔╗
-                         ║╔═╗║                ║║
+        .setDescription(`╔═══╗________________╔╗
+                         ║╔═╗║________________║║
                          ║║─╚╬══╦╗╔╦╗╔╦══╦═╗╔═╝╠══╗
                          ║║─╔╣╔╗║╚╝║╚╝║╔╗║╔╗╣╔╗║══╣
                          ║╚═╝║╚╝║║║║║║║╔╗║║║║╚╝╠══║
