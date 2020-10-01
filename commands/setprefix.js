@@ -3,7 +3,7 @@ const { default_prefix } = require("../config.json")
 
 module.exports = {
   name: "setprefix",
-  category: "s",
+  category: "🧹**utility**🧹",
   usage: "setprefix <new-prefix>",
   description: "Change the guild prefix",
   run: async (client, message, args) => {
