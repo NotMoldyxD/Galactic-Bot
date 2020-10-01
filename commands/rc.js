@@ -2,7 +2,7 @@ const discord = require('discord.js');
 //realm code: 94x17VMn4E0
 module.exports = {
     name: 'rc',
-    category: 'info',
+    category: '🥔**info**🥔',
     description: 'Shows the realm code.',
     usage: `g/rc`,
     run: async (client, message, args) => {
