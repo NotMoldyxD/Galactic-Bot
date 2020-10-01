@@ -1,5 +1,8 @@
-
-run = async (bot, message, args) => {
+module.exports = {
+  name: "afk",
+  description: "go afk",
+  category: "😆**fun**😆",
+run: async (bot, message, args) => {
 
     let reason = args.join(' ') ? args.join(' ') : 'I am currently afk, I will reply as soon possible.';
     let afklist = bot.afk.get(message.author.id);
