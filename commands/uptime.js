@@ -2,7 +2,7 @@ module.exports = {
 name: 'uptime',
 description: 'Shows how long the bot has been online for.',
 usage: 'uptime',
-category: 'info',
+category: '🥔**info**🥔',
 run: async (client, message) => {
   var milliseconds = parseInt((client.uptime % 1000) / 100),
       seconds = parseInt((client.uptime / 1000) % 60),
