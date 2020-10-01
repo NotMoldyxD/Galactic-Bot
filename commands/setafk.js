@@ -1,4 +1,8 @@
-exports.run = (client, message, args) =>{
+module.exports = {
+  name: "setafk",
+  description: "go afk",
+  category: "😆**fun**😆",
+  run: async (client, message, args) => {
     const setStatus = message.content.split(' ');
 
     if(setStatus[1] === 'afk'){
