@@ -1,27 +1,19 @@
-module.exports = {
-  name: "setafk",
-  description: "go afk",
-  category: "😆**fun**😆",
-  run: async (client, message, args) => {
-    const setStatus = message.content.split(' ');
 
-    if(setStatus[1] === 'afk'){
-        client.user.setAFK(true);
-        message.channel.send("Your status has been set to afk!");
+run = async (bot, message, args) => {
+
+    let reason = args.join(' ') ? args.join(' ') : 'I am currently afk, I will reply as soon possible.';
+    let afklist = bot.afk.get(message.author.id);
+
+    if (!afklist) {
+        let construct = {
+            id: message.author.id,
+            usertag: message.author.tag,
+            reason: reason
+        };
+
+        bot.afk.set(message.author.id, construct);
+        return message.reply(`you have been set to afk for reason: ${reason}`).then(msg => msg.delete(5000));
     }
 
-    else if(setStatus[1] === 'notafk'){
-        client.user.setAFK(false);
-        message.channel.send(`Welcome back ${message.author}`);
-    }
-
-    else if(!setStatus[1] || setStatus[1] === undefined){
-        message.channel.send("You did not choose afk or notafk as current status!");
-    }
-
-    else{
-        message.channel.send("You did not choose afk or notafk as current status!");
-    }
-
-}
+};
 }
