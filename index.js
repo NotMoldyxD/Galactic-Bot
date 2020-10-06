@@ -20,7 +20,7 @@ client.setProvider(
     useFindAndModify: false,
   })
     .then((client) => {
-      return new MongoDBProvider(client, 'WornOffKeys')
+      return new MongoDBProvider(client, 'MoldyYT')
     })
     .catch((err) => {
       console.error(err)
