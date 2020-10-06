@@ -10,8 +10,15 @@ const { Mongoose } = require('mongoose');
 const { badwords } = require("./data.json") 
 const antispam = require("better-discord-antispam");
 const xpfile = require('./xp.json')
+const memberCount = require('./member-count')
 const player = new Player(client)
 client.player = player;
+
+client.on('ready', () => {
+  console.log('Member Count Is Ready!')
+
+  memberCount(client)
+})
 
 client.on("message", async message => {
   
