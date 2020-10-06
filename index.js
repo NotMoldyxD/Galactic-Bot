@@ -14,6 +14,19 @@ const memberCount = require('./member-count')
 const player = new Player(client)
 client.player = player;
 
+client.setProvider(
+  MongoClient.connect(config.mongoPath, {
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+    .then((client) => {
+      return new MongoDBProvider(client, 'WornOffKeys')
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+)
+
 client.on('ready', () => {
   console.log('Member Count Is Ready!')
 
