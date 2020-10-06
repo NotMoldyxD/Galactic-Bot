@@ -4,7 +4,7 @@ let ms = require("parse-ms");
 
 
 module.exports = {
-    name: "FreeOwnerMoney",
+    name: "daily2",
     description: "Collect the daily credits for owners.",
     category: "🎮**game**🎮",
 
