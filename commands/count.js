@@ -23,7 +23,7 @@ run: async (client, message, args) => {
         await countGame.add(message.author.id);
         return message.channel.send(`**${message.member.user.tag}** has counted! Game is now at **${countGame.size}**.`);
     }
-
+  }
 };
 
 
