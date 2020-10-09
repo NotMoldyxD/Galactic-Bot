@@ -2,6 +2,8 @@ const countGame = new Set();
 const { prefix } = require('../config');
 module.exports = {
     name: 'count',
+    category: "😆**fun**😆",
+    usage: "count <number>",
 run: async (client, message, args) => {
 
     let cmdName = client.commands.get('count', 'help.name');
