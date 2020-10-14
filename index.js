@@ -189,4 +189,14 @@ client.on("message" ,function(message) {
     })
 })
 
+client.on ("message", (message) => {
+if (message.content.startsWith ("cookie?")) {
+    const embed = new Discord.MessageEmbed()
+             .setTitle(`Moldy's Cookies!`)
+             .setDescription(`Moldy has given you some cookies :cookie:!`)
+ 
+         message.channel.send(embed)
+}
+})
+
 client.login(token);
