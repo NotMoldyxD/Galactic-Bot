@@ -52,7 +52,7 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
     const channel = client.channels.cache.get('745723915308892160')
     var embed = new Discord.MessageEmbed()
-    .setTitle(`A Galactic Champion Has Come To Our Server Please Welcome Him!`)
+    .setTitle(`A Galactic Champion Has Come To Our Server Please Welcome them!`)
     .setThumbnail (member.user.displayAvatarURL())
     .setColor("GREEN")
     .setDescription(`Welcome ${member} to our server. Make sure to check out #rules to unlock the rest of the server!`)
@@ -65,7 +65,7 @@ client.on('guildMemberRemove', member => {
     .setTitle(`A Galactic Champion Has Left This Galaxy 😥!`)
     .setThumbnail (member.user.displayAvatarURL())
     .setColor("GREEN")
-    .setDescription(`Say goodbye to ${member}. He has left us 😥!`)
+    .setDescription(`Say goodbye to ${member}. they left us 😥!`)
     channel.send(embed)
 })
 
