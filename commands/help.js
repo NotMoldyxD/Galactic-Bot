@@ -27,15 +27,9 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription(`
-╔═══╗────────────────╔╗
-║╔═╗║────────────────║║
-║║─╚╬══╦╗╔╦╗╔╦══╦═╗╔═╝╠══╗
-║║─╔╣╔╗║╚╝║╚╝║╔╗║╔╗╣╔╗║══╣
-║╚═╝║╚╝║║║║║║║╔╗║║║║╚╝╠══║
-╚═══╩══╩╩╩╩╩╩╩╝╚╩╝╚╩══╩══╝`)
+        .setDescription(`Galactic PvP Commands!`)
         .setColor("GREEN")
-        .setFooter(client.user.username, client.user.displayAvatarURL())
+        .setFooter('Please do ?help <command name> in the server to learn more about a command!', client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL());
 
       let com = {};
@@ -57,7 +51,7 @@ module.exports = {
         emx.addField(`${category.toUpperCase()}[${value.length}]`, desc);
       }
 
-      return message.channel.send(emx);
+      return message.author.send(emx);
     }
   }
 };
