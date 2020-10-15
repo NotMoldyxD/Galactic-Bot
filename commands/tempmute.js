@@ -22,7 +22,7 @@ if(message.member.hasPermission('MANAGE_MESSAGES')) {
         return message.reply("You didnt specify a time!");
     }
 
-    member.roles.add(role.id);
+    member.roles.add(role);
 
     message.channel.send(`@${member.user.tag} has now been muted for ${ms(ms(time))}`)
 
