@@ -1,10 +1,10 @@
 const { MessageEmbed } = require('discord.js')
 const os = require('os')
 module.exports = {
-    name: "bot-info",
+    name: "info",
     category: "🧹**utility**🧹",
     description: "Show info on galactic bot",
-    usage: "bot-info",
+    usage: "info",
     aliases: ['botinfo'],
     run: async (client, message, args) => {
         const embed = new MessageEmbed()
