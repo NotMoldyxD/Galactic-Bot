@@ -8,7 +8,7 @@ module.exports = {
 
         const amount = args.join(" ");
 
-         if(!message.member.hasPermission("ADMINISTRATOR")) {
+         if(!message.member.hasPermission("MANAGE_MESSAGES")) {
       return message.channel.send(`**${message.author.username}**, You do not have perms to clear messages`)
     }
 
