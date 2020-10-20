@@ -11,7 +11,7 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, You do not have perms to ban someone`)
     }
     
-    if(!message.guild.me.hasPermission("ADMINISTRATOR")) {
+    if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
       return message.channel.send(`**${message.author.username}**, I am do not have perms to ban someone`)
     }
 
