@@ -18,7 +18,7 @@ module.exports = {
         );
       }
       let Avatar = User.displayAvatarURL();
-      let Channel = message.guild.channels.cache.find(c => c.name === 'reports')
+      let Channel = message.guild.channels.cache.find(c => c.name === 'reports');
       );
       if (!Channel)
         return message.channel.send(
