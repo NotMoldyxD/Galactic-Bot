@@ -4,7 +4,7 @@ module.exports = {
     usage: "unmute <@user>",
     description: "You can unmute people that where previously muted",
     run: async (client, message, args) => {
-      if (!message.member.hasPermission("ADMINISTRATOR")) {
+      if (!message.member.hasPermission("MUTE_MEMBERS")) {
         return message.channel.send(
           "Sorry but you do not have permission to unmute anyone"
         );
