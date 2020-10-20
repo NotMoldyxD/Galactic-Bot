@@ -42,7 +42,7 @@ module.exports = {
         }
 
 
-        user.roles.add(muterole)
+        user.roles.add("745723906001731604")
 
         await message.channel.send(`You Muted **${message.mentions.users.first().username}** for \`${reason}\``)
 
