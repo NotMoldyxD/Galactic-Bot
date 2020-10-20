@@ -8,7 +8,7 @@ module.exports = {
   category: "📝**moderation**📝",
   run: async (client, message, args) => {
     
-    if(!message.member.hasPermission("ADMINISTRATOR")) {
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) {
       return message.channel.send("You should have admin perms to use this command!")
     }
     
