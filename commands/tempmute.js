@@ -22,16 +22,14 @@ if(message.member.hasPermission('MANAGE_MESSAGES')) {
         return message.reply("You didnt specify a time!");
     }
 
-    member.roles.remove(mainrole.id)
-    member.roles.add(role.id);
+    member.roles.add(role);
 
     message.channel.send(`@${member.user.tag} has now been muted for ${ms(ms(time))}`)
 
     member.send(`You Are Muted in **${message.guild.name}** for \`${ms(ms(time))}\``)
 
     setTimeout( function () {
-        member.roles.add(mainrole.id)
-        member.roles.remove(role.id);
+        member.roles.remove(role);
         message.channel.send(`${member.user.tag} has been unmuted.`)
         member.send(`You Are unmuted in **${message.guild.name}**.`)
     }, ms(time));
