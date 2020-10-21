@@ -4,6 +4,7 @@ const ms = require('parse-ms');
 module.exports = {
     name: "work",
     description: "Work your a** off",
+    category: "🎮**game**🎮",
 
     async run (client, message, args) {
         let user = message.author;
