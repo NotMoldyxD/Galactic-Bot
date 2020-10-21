@@ -23,7 +23,7 @@ module.exports = {
     )});
 
 
-    message.channel.send('Success!')
+    message.channel.send(`I have cleared ${amount} messages!`)
 
     }
 }
