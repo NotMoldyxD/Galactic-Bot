@@ -1,41 +1,27 @@
-const Discord = require("discord.js");
-const db = require("quick.db");
-let ms = require("parse-ms");
-
+  
+const db = require('quick.db');
+const ms = require('parse-ms');
 
 module.exports = {
     name: "daily",
-    description: "Collect the daily credits.",
-    category: "🎮**game**🎮",
+    description: "Receive a daily award of money",
 
-run: async (client, message, args) => {
-    let pad_zero = num => (num < 10 ? '0' : '') + num;
-    let cooldown = 8.64e+7; // 24 Hours in ms.
-    let amount = 700; // How much user will get it in their dailies.
+    async run (client, message, args) {
+        let user = message.author;
+        let timeout = 86400000;
+        let amount = 500;
 
-    let lastDaily = await db.get(`lastDaily.${message.author.id}`);
-    let buck = await db.get(`account.${message.author.id}.balance`);
+        let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
 
-    try {
-        
-        if (lastDaily !== null && cooldown - (Date.now() - lastDaily) > 0) {
-            let timeObj = ms(cooldown - (Date.now() - lastDaily));
+        if(daily !== null && timeout - (Date.now() - daily) > 0){
+            let time = ms(timeout - (Date.now() - daily));
 
-            let hours = pad_zero(timeObj.hours).padStart(2, "0"),
-                mins = pad_zero(timeObj.minutes).padStart(2, "0"),
-                secs = pad_zero(timeObj.seconds).padStart(2, "0");
-
-            let finalTime = `**${hours}:${mins}:${secs}**`;
-            return message.channel.send(`Sorry, you cannot collect your dailies too early. Please wait until ${finalTime}.`);
+            return message.channel.send(`You've already collected your daily award. Come back in ${time.days}d, ${time.hours}h, ${time.minutes}m, and ${time.seconds}s`)
         } else {
-            db.set(`lastDaily.${message.author.id}`, Date.now());
-            db.add(`account.${message.author.id}.balance`, amount);
-            return message.channel.send(`Great **${message.author.tag}!** You've been received 700 dollars!`);
-        }
+            db.add(`money_${message.guild.id}_${user.id}`, amount);
+            db.set(`daily_${message.guild.id}_${user.id}`, Date.now());
 
-    } catch (error) {
-        console.log(error);
-        return message.channel.send(`Oopsie, unknown error I guess: ${error}`);
+            message.channel.send(`Successfully added ${amount} coins to your account`)
+        }
     }
-}
 }
