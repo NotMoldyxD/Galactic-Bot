@@ -1,3 +1,4 @@
+//hadmin file 770111009549320192
 const discord = require("discord.js")
 module.exports = {
     name: "verify",
